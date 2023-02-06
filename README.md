@@ -69,7 +69,10 @@ sudo systemctl enable neard
 sudo systemctl start neard
 ```
 
-Then use the `journalctl` commands in the guide to view the logs to make sure everything looks good.
+Then use the `journalctl` commands in the guide to view the logs to make sure everything looks good:
+```bash
+journalctl -n 100 -f -u neard | ccze -A
+```
 
 ## Deploy staking pool contract
 
