@@ -38,6 +38,8 @@ aws s3 --no-sign-request cp s3://near-protocol-public/backups/mainnet/rpc/latest
 LATEST=$(cat latest)
 aws s3 --no-sign-request cp --no-sign-request --recursive s3://near-protocol-public/backups/mainnet/rpc/$LATEST ~/.near/data
 ```
+Note: You can browse this bucket by logging into AWS and visiting:
+https://s3.console.aws.amazon.com/s3/buckets/near-protocol-public
 
 ###  Initialize node
 
