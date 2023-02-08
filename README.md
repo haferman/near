@@ -45,6 +45,12 @@ Use s5cmd:
 ```bash
 s5cmd --no-sign-request=true cp 's3://near-protocol-public/backups/mainnet/rpc/2023-02-06T12:01:01Z/*' .
 ```
+or try
+```bash
+aws s3 --no-sign-request cp s3://near-protocol-public/backups/mainnet/rpc/latest .
+LATEST=$(cat latest)
+s5cmd --no-sign-request sync "s3://near-protocol-public/backups/mainnet/rpc/${latest:?}/*" ~/.near/data/
+```
 
 ###  Initialize node
 
