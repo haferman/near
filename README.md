@@ -41,6 +41,11 @@ aws s3 --no-sign-request cp --no-sign-request --recursive s3://near-protocol-pub
 Note: You can browse this bucket by logging into AWS and visiting:
 https://s3.console.aws.amazon.com/s3/buckets/near-protocol-public
 
+Use s5cmd:
+```bash
+s5cmd --no-sign-request=true cp 's3://near-protocol-public/backups/mainnet/rpc/2023-02-06T12:01:01Z/*' .
+```
+
 ###  Initialize node
 
 Please do **NOT** do the `wget` steps to download the config.json and genesis.json. In fact, clear out any existing \*.json files: 
