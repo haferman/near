@@ -53,7 +53,9 @@ s5cmd --no-sign-request sync "s3://near-protocol-public/backups/mainnet/rpc/${la
 ```
 
 or, finally, rsync from live node:
-```rsync -Pav  near-aws:~/.near/data/ .```
+```bash
+rsync -Pav  near-aws:~/.near/data/ .
+```
 The initial rsync might take 1-2 hours, then repeat another 3-4 times to get a full sync of the dynamic data.
 
 ###  Initialize node
