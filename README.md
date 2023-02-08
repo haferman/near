@@ -115,3 +115,10 @@ true
 ```
 
 Don't worry about the `Failure [poolv1.near]: Error: ` (this is because the above command has only staked 30 NEAR, which does not meet the minimum staking requirement... this can be fixed later when the NEAR delegation is received. The important thing is that the staking pool gets created and the last line of the command shows `true`.
+
+## Swapping a validator
+See https://github.com/near/stakewars-iii/blob/main/challenges/013.md
+Also search above for "rsync" to see how I synced chain data.
+
+Remember to shutdown neard on active node, shutoff ping in cron, swap out validator keys, then restart neard if necessary.  
+Then on backup node, shutdown neard, turn on ping, swap in validator keys, and start up neard.
