@@ -52,6 +52,10 @@ LATEST=$(cat latest)
 s5cmd --no-sign-request sync "s3://near-protocol-public/backups/mainnet/rpc/${latest:?}/*" ~/.near/data/
 ```
 
+or, finally, rsync from live node:
+```rsync -Pav  near-aws:~/.near/data/ .```
+The initial rsync might take 1-2 hours, then repeat another 3-4 times to get a full sync of the dynamic data.
+
 ###  Initialize node
 
 Please do **NOT** do the `wget` steps to download the config.json and genesis.json. In fact, clear out any existing \*.json files: 
