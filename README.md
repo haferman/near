@@ -52,7 +52,7 @@ LATEST=$(cat latest)
 s5cmd --no-sign-request sync "s3://near-protocol-public/backups/mainnet/rpc/${latest:?}/*" ~/.near/data/
 ```
 
-or, finally, rsync from live node:
+or, finally, rsync from live node (when inside ~/.near.data)
 ```bash
 rsync -Pav  near-aws:~/.near/data/ .
 ```
